@@ -25,32 +25,32 @@ cc_library(
     deps = select({
         "//mediapipe:android_x86": [
             "@com_github_glog_glog_no_gflags//:glog",
-        ],
-        "//mediapipe:android_x86_64": [
-            "@com_github_glog_glog_no_gflags//:glog",
-        ],
-        "//mediapipe:android_armeabi": [
-            "@com_github_glog_glog_no_gflags//:glog",
-        ],
-        "//mediapipe:android_arm": [
-            "@com_github_glog_glog_no_gflags//:glog",
-        ],
-        "//mediapipe:android_arm64": [
-            "@com_github_glog_glog_no_gflags//:glog",
-        ],
-        "//mediapipe:ios": [
-            "@com_github_glog_glog_no_gflags//:glog",
-        ],
-        "//mediapipe:macos": [
-            "@com_github_glog_glog//:glog",
-        ],
-        "//mediapipe:windows": [
-            "@com_github_glog_glog//:glog",
-        ],
-        "//conditions:default": [
-            "@com_github_glog_glog//:glog",
-        ],
-    }),
+       ],
+       "//mediapipe:android_x86_64": [
+           "@com_github_glog_glog_no_gflags//:glog",
+       ],
+       "//mediapipe:android_armeabi": [
+           "@com_github_glog_glog_no_gflags//:glog",
+       ],
+       "//mediapipe:android_arm": [
+           "@com_github_glog_glog_no_gflags//:glog",
+       ],
+       "//mediapipe:android_arm64": [
+           "@com_github_glog_glog_no_gflags//:glog",
+       ],
+       "//mediapipe:ios": [
+           "@com_github_glog_glog_no_gflags//:glog",
+       ],
+       "//mediapipe:macos": [
+           "@com_github_glog_glog//:glog",
+       ],
+       "//mediapipe:windows": [
+           "@com_github_glog_glog//:glog",
+       ],
+       "//conditions:default": [
+           "@com_github_glog_glog//:glog",
+       ],
+   }),
 )
 
 config_setting(
@@ -92,7 +92,7 @@ OPENCV_MODULES = [
 # to switch to static libraries.
 OPENCV_SHARED_LIBS = True
 
-OPENCV_SO_VERSION = "3.4"
+OPENCV_SO_VERSION = "4.5.2"
 
 cmake_external(
     name = "opencv_cmake",
