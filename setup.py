@@ -243,7 +243,7 @@ class BuildBinaryGraphs(build.build):
         'build',
         '--compilation_mode=opt',
         '--copt=-DNDEBUG',
-        '--define=MEDIAPIPE_DISABLE_GPU=1',
+        '--define=MEDIAPIPE_DISABLE_GPU=0',
         '--action_env=PYTHON_BIN_PATH=' + _normalize_path(sys.executable),
         os.path.join('mediapipe/modules/', graph_path),
     ]
@@ -300,7 +300,7 @@ class BuildBazelExtension(build_ext.build_ext):
         'build',
         '--compilation_mode=opt',
         '--copt=-DNDEBUG',
-        '--define=MEDIAPIPE_DISABLE_GPU=1',
+        '--define=MEDIAPIPE_DISABLE_GPU=0',
         '--action_env=PYTHON_BIN_PATH=' + _normalize_path(sys.executable),
         str(ext.bazel_target + '.so'),
     ]
